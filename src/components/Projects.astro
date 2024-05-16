@@ -1,17 +1,17 @@
 ---
 const PROJECTS = [{
-    title : 'Proyecto 1 - asd',
+    title : 'Proyecto 1 - Test',
     description : 'asdasd test 123123',
     link: '/',
     github: 'link',
-    img: 'projects/p1.webp',
+    img: 'projects/p4.png',
     tags : ['React', 'Tailwind CSS']
     },{
-    title : 'Proyecto 2 - test',
-    description : 'Este es un proyecto sobre asdasdassd',
+    title : 'Proyecto 2 - Portfolo',
+    description : 'Este es un proyecto de portfolio',
     link: '/',
     github: 'link',
-    img: 'projects/p2.webp',
+    img: 'projects/p3.png',
     tags : ['Next.js', 'Laravel']
     }
 ]
@@ -19,19 +19,21 @@ const PROJECTS = [{
 
 {
     PROJECTS.map(({title, description, tags, img}) => (
-        <article>
-            <h3 class="text-2xl font-semibold mb-2">{title}</h3>
-            <p class="text-lg mb-4 text-pretty">{description}</p>
+        <article class="mb-12">
+            <h3 class="text-2xl font-semibold mb-2 text-purple-300">{title}</h3>
+            <p class="text-lg mb-3 text-pretty opacity-80">{description}</p>
+
             <ul class="flex gap-x-2 flex-row mb-2">
                 {tags.map(tag => (
                     <li>
-                        <span class="flex gap-x-2 bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300">
+                        <span class="flex gap-x-2 bg-gray-100 text-gray-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300">
                             {tag}
                         </span>
                     </li>
                 ))}
             </ul>
-            <img class="rounded shadow-2xl shadow-white/10" src={img} alt={title}>
+
+            <img class="rounded shadow-2xl shadow-white/5" src={img} alt={title}>
         </article>
     ))
 }

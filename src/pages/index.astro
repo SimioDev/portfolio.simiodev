@@ -1,10 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Badge from '../components/Badge.astro';
-import Card from '../components/Card.astro';
 import GitHub from '../components/icons/GitHub.astro';
 import GmailIcon from '../components/icons/Gmail.astro';
 import Maleta from '../components/icons/Maleta.astro';
+import YouTube from '../components/icons/YouTube.astro';
 import Code from '../components/icons/Code.astro';
 import SocialLinks from '../components/SocialLinks.astro';
 import Experience from '../components/Experience.astro';
@@ -16,13 +16,19 @@ import Projects from '../components/Projects.astro';
 	<main class="px-4">
 
 		<Container class="py-36 pb-32">
-			<img class="rounded-full size-16 mb-4" src="https://img.europapress.es/fotoweb/fotonoticia_20170511123013_690.jpg" alt="Simio">
 
-			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">Hey! Soy Nestor<div class="flex justify-center items-center">
-				<Badge>Disponible para contrataciones</Badge>
-			</div></h1>
+			<div class="flex flex-row gap-x-6 mb-4">
+				<img class="rounded-full size-16" src="/simio.png" alt="Simio Image">
+
+				<div class="flex justify-center items-center">
+					<Badge>Disponible para contrataciones ❤️</Badge>
+				</div>
+
+			</div>
+
+			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold pb-6 lg:pb-10">Hey! Soy Nestor Cabrera</h1>
 			
-			<h2 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px]"><span class="text-purple-300">Futuro Ingeniero de Software</span>. Soy de Cucuta, Colombia y tengo actualmente 18 años de edad.</h2>
+			<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]"><span class="text-purple-300">Futuro Ingeniero de Software</span>. Soy de Cucuta, Colombia y tengo actualmente 18 años de edad.</h2>
 
 
 			<nav class="flex gap-4 mt-5 flex-wrap">
@@ -31,8 +37,8 @@ import Projects from '../components/Projects.astro';
 					GitHub
 				</SocialLinks>
 				<SocialLinks href="https://github.com/SimioDev">
-					<GitHub class="size-4 md:size-6" />
-					Otra Red
+					<YouTube class="size-4 md:size-6" />
+					YouTube
 				</SocialLinks>
 				<SocialLinks href="mailto:nestcdev@gmail.com">
 					<GmailIcon class="size-4 md:size-6" />

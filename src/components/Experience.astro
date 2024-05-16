@@ -3,24 +3,19 @@ import ExperienceItem from "./ExperienceItem.astro"
 
 const EXPERIENCE = [
     {
-        date: 'Febrero 0000',
-        title: 'Mi primer Camino',
-        description: 'asdasd',
-        link: '/'
+        date: 'Actualmente',
+        title: 'Formación profesional',
+        description: 'Me encuentro estudiando una ingeniería en desarrollo de software, cursando quinto semestre.'
     },{
-        date: 'Febrero 1211',
-        title: 'Mi segundo Camino',
-        description: 'asdasd'
-    },{
-        date: 'Febrero 1211',
-        title: 'Mi Tercer Camino',
-        description: 'asdasdasd qweqwe',
+        date: 'Noviembre 2023',
+        title: 'Desarrollador de Software',
+        description: 'Principal desarrollador de software en empresa inmobiliaria, dedicado al análisis y revisión del funcionamiento de sus sistemas de información y herramientas de marketing.',
         link: '/'
     }
 ]
 ---
 
-<ol class="relative border-s border-gray-200 dark:border-gray-700">
+<ol class="relative border-s-2 border-gray-500">
     {
         EXPERIENCE.map(experience => (
             <li class="mb-10 ms-4">
