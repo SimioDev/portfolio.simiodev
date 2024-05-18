@@ -13,12 +13,13 @@ import Projects from '../components/Projects.astro';
 ---
 
 <Layout title="Portfolio de SimioDev - Desarrollador y Programador Web" description="Contrata a SimioDev para crear tu aplicación web. Hacemos de tu proyecto un sueño hecho realidad.">
+
 	<main class="px-4">
 
 		<Container class="py-36 pb-32">
 
 			<div class="flex flex-row gap-x-6 mb-4">
-				<img class="rounded-full size-16" src="/simio.png" alt="Simio Image">
+				<img class="rounded-full size-16" src="/simio.png" alt="Simio">
 
 				<div class="flex justify-center items-center">
 					<Badge>Disponible para contrataciones ❤️</Badge>
@@ -28,7 +29,7 @@ import Projects from '../components/Projects.astro';
 
 			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold pb-6 lg:pb-10">Hey! Soy Nestor Cabrera</h1>
 			
-			<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]"><span class="text-purple-300">Futuro Ingeniero de Software</span>. Soy de Cucuta, Colombia y tengo actualmente 18 años de edad.</h2>
+			<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]"><span class="text-purple-300">Desarrollador Web y Futuro Ingeniero de Software.</span> Me conocen como <span class="text-purple-300">SimioDev</span> y soy de Cucuta, Colombia. Tengo actualmente 18 años de edad.</h2>
 
 
 			<nav class="flex gap-4 mt-5 flex-wrap">
@@ -36,7 +37,7 @@ import Projects from '../components/Projects.astro';
 					<GitHub class="size-4 md:size-6" />
 					GitHub
 				</SocialLinks>
-				<SocialLinks href="https://github.com/SimioDev">
+				<SocialLinks href="/">
 					<YouTube class="size-4 md:size-6" />
 					YouTube
 				</SocialLinks>
@@ -51,7 +52,7 @@ import Projects from '../components/Projects.astro';
 		<Container id="experiencia">
 			<h2 class="text-2xl md:text-3xl font-semibold mb-6 flex gap-x-3 items-center">
 				<Maleta class="size-7"/>
-				Experiencia Laboral
+				Experiencia
 			</h2>
 			<Experience />
 		</Container>
@@ -63,6 +64,7 @@ import Projects from '../components/Projects.astro';
 			</h2>
 			<Projects/>
 		</Container>
+
 	</main>
 </Layout>
 

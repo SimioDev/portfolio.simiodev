@@ -1,10 +1,37 @@
-<header class="flex justify-center items-center py-5 w-full xl:w-[1120px] mx-auto">
-    
-<nav class="flex flex-row gap-x-10 opacity-90 text-white">
-    <a class="hover:text-purple-300" href="#top">Inicio</a>
-    <a class="hover:text-purple-300" href="#experiencia">Experiencia</a>
-    <a class="hover:text-purple-300" href="#proyectos">Proyectos</a>
-    <a class="hover:text-purple-300" href="#contacto">Contacto</a>
-</nav>
+<header id="header" class={`
 
-</header>
+    fixed top-4 left-1/2 transform -translate-x-1/2 
+    text-white opacity-90
+    flex justify-center items-center
+    py-3 px-6
+    w-auto max-w-[1120px] z-50 
+    rounded-full
+    transition-all duration-300
+
+    `}>
+
+    <nav class="flex flex-row gap-x-9 md:gap-x-10">
+      <a class="hover:text-purple-300" href="#top">Inicio</a>
+      <a class="hover:text-purple-300" href="#experiencia">Experiencia</a>
+      <a class="hover:text-purple-300" href="#proyectos">Proyectos</a>
+      <a class="hover:text-purple-300" href="#contacto">Contacto</a>
+    </nav>
+
+  </header>
+  
+  <script>
+    document.addEventListener('scroll', function() {
+      const header = document.getElementById('header');
+      const links = document.querySelectorAll('#header nav a');
+      if(header){
+        if (window.scrollY > 0) {
+        header.classList.add('bg-white/80', 'ring-1', 'ring-white/10','shadow-lg', 'text-black', 'backdrop-blur-md');
+        links.forEach(link => link.classList.add('hover:text-purple-600'));
+        } else {
+        header.classList.remove('bg-white/80','ring-1', 'ring-white/10', 'shadow-lg', 'text-black', 'backdrop-blur-md');
+        links.forEach(link => link.classList.remove('hover:text-purple-600'));
+        }
+      }
+    });
+  </script>
+  
