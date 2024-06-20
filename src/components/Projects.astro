@@ -1,18 +1,18 @@
 ---
 const PROJECTS = [{
-    title : 'Proyecto 1 - Test',
-    description : 'Descripción del proyecto',
+    title : 'PrimateNet - Red Social',
+    description : 'Prototipo de Red Social para usuarios, con sistema de creación de publicaciones, gestión de publicaciones y perfiles.',
     link: '/',
     github: 'link',
-    img: 'projects/p4.png',
-    tags : ['React', 'Tailwind CSS']
+    img: 'projects/p1.webp',
+    tags : ['PHP', 'Bootstrap', 'MySQL']
     },{
-    title : 'Proyecto 2 - Portfolio',
-    description : 'Este es un proyecto de portfolio',
+    title : 'Chat en Tiempo Real',
+    description : 'Demo de un chat en tiempo real con creación de chats, registro e ingreso de usuarios, uso de websockets.',
     link: '/',
     github: 'link',
-    img: 'projects/p3.png',
-    tags : ['Next.js', 'Laravel']
+    img: 'projects/p2.webp',
+    tags : ['JavaScript', 'PHP', 'MySQL', 'Bootstrap']
     }
 ]
 ---
@@ -20,20 +20,21 @@ const PROJECTS = [{
 {
     PROJECTS.map(({title, description, tags, img}) => (
         <article class=" mb-12">
-            <img class="rounded shadow-2xl shadow-white/5" src={img} alt={title}>
             
                 <h3 class="text-2xl font-semibold mb-2 text-purple-300">{title}</h3>
-                <p class="text-lg mb-3 text-pretty opacity-80">{description}</p>
+                <p class="text-lg mb-2 text-pretty opacity-80">{description}</p>
 
-                <ul class="flex gap-x-2 flex-row mb-2">
+                <ul class="flex gap-x-1 flex-row mb-2">
                     {tags.map(tag => (
                         <li>
-                            <span class="flex gap-x-2 bg-indigo-300 text-indigo-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded-full">
+                            <span class="flex gap-x-2 text-white bg-purple-500 text-sm font-medium me-2 px-2.5 py-0.5 rounded-full">
                                 {tag}
                             </span>
                         </li>
                     ))}
                 </ul>
+
+                <img class="rounded shadow-2xl shadow-white/5" src={img} alt={title}>
 
         </article>
     ))

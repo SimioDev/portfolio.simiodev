@@ -8,7 +8,7 @@
     rounded-full
     transition-all duration-300
 
-    `}>
+  `}>
 
     <nav class="flex flex-row gap-x-4 md:gap-x-10">
       <a class="hover:text-purple-300" href="#top">Inicio</a>
@@ -25,9 +25,9 @@
       const links = document.querySelectorAll('#header nav a');
       if(header){
         if (window.scrollY > 0) {
-          header.classList.remove('text-white');
-        header.classList.add('bg-white/80', 'ring-1', 'ring-white/10','shadow-lg', 'text-black', 'backdrop-blur-md');
-        links.forEach(link => link.classList.add('hover:text-purple-600'));
+          header.classList.remove('text-white', 'opacity-90');
+          header.classList.add('bg-white/80', 'ring-1', 'ring-white/10','shadow-lg', 'text-black', 'backdrop-blur-md');
+          links.forEach(link => link.classList.add('hover:text-purple-600'));
         } else {
         header.classList.remove('bg-white/80','ring-1', 'ring-white/10', 'shadow-lg', 'text-black', 'backdrop-blur-md');
         links.forEach(link => link.classList.remove('hover:text-purple-600'));
