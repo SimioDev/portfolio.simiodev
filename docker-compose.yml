@@ -1,0 +1,6 @@
+services:
+  portfolio_service:
+    image: portfolio_image
+    ports:
+      - "80:80"
+    restart: on-failure
