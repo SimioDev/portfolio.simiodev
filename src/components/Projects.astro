@@ -1,42 +1,56 @@
 ---
-const PROJECTS = [{
-    title : 'PrimateNet - Red Social',
-    description : 'Prototipo de Red Social para usuarios, con sistema de creación de publicaciones, gestión de publicaciones y perfiles.',
-    link: '/',
-    github: 'link',
-    img: 'projects/p1.webp',
-    tags : ['PHP', 'Bootstrap', 'MySQL']
-    },{
-    title : 'Chat en Tiempo Real',
+const projects = [{
+    title : 'Chat en Tiempo Real - Con WebSockets',
     description : 'Demo de un chat en tiempo real con creación de chats, registro e ingreso de usuarios, uso de websockets.',
     link: '/',
     github: 'link',
-    img: 'projects/p2.webp',
+    img: 'http://imgfz.com/i/8mOPnwZ.png',
     tags : ['JavaScript', 'PHP', 'MySQL', 'Bootstrap']
+    },{
+    title : 'PrimateNet - Red Social',
+    description : 'Red Social para todo tipo de usuarios, publica tus post y expresate con texto o imágenes, edita tu perfil a tu gusto y conoce todas las publicaciones.   ',
+    link: '/',
+    github: 'link',
+    img: 'http://imgfz.com/i/RVezB4Z.png',
+    tags : ['PHP', 'JavaScript', 'MySQL', 'Bootstrap']
     }
 ]
 ---
 
-{
-    PROJECTS.map(({title, description, tags, img}) => (
-        <article class=" mb-12">
-            
-                <h3 class="text-2xl font-semibold mb-2 text-purple-300">{title}</h3>
-                <p class="text-lg mb-2 text-pretty opacity-80">{description}</p>
 
-                <ul class="flex gap-x-1 flex-row mb-2">
-                    {tags.map(tag => (
-                        <li>
-                            
-                            <span class="flex gap-x-2 text-white text-sm font-medium me-2 px-2.5 py-0.5 rounded-full">
-                                {tag}
-                            </span>
-                        </li>
-                    ))}
-                </ul>
-
-                <img class="rounded shadow-2xl shadow-white/5" src={img} alt={title}>
-
-        </article>
-    ))
-}
+<div class="flex flex-col gap-y-16">
+    {projects.map(({ img, title, description, tags, link }) => (
+      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+        <div class="w-full md:w-1/2">
+          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+            <img
+              class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+              loading="lazy"
+              src={img}
+            />
+          </div>
+        </div>
+  
+        <div class="w-full md:w-1/2 md:max-w-lg">
+          <h3 class="text-2xl font-bold text-purple-300">
+            {title}
+          </h3>
+          <div class="flex flex-wrap mt-2">
+            <ul class="flex flex-row mb-2 gap-x-2">
+              {tags.map((tag) => (
+                <li>
+                  <span class="flex gap-x-2 rounded-full text-xs py-1 px-2 border border-purple-300 bg-gray-800">
+                    {tag}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class="mt-3 text-gray-700 dark:text-gray-100">
+            {description}
+          </div>
+        </div>
+      </article>
+    ))}
+  </div>
+  
